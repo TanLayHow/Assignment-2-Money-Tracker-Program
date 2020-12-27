@@ -14,7 +14,7 @@ Caters to (People who want to get information on their expenses):
 
 Potential features:
 1. Dark Mode UI
-2. Better visuals
+2. Better visuals:
  Charts,
  Diagrams,
  Logos
