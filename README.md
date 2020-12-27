@@ -4,9 +4,9 @@ Assignment website: Money Tracker Program
 User intent:
 1. Helping users track their daily expenses
 2. Give users information about their expenses
- a. Categories they spend their money on -> Using Charts to display information
- b. Total expenses daily and monthly
- c. If they have crossed their budgets
+a. Categories they spend their money on -> Using Charts to display information
+b. Total expenses daily and monthly
+c. If they have crossed their budgets
  
 Caters to:
 1. Students
