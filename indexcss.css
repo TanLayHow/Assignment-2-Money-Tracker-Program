@@ -1,0 +1,49 @@
+.main{
+    margin-top: 46px;
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 1px 1px;
+    
+  }
+
+.navbar a.tag {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a img{
+    width: 46px;
+    height: 46px;
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 150px
+}
+
+.navbar a.tag:hover{
+    background-color:#f2f2f2;
+    color:#155c11;
+}
+
+/* Keep */
+html {
+    font-family: Open Sans,sans-serif;
+    overflow-y: scroll;
+    height: 1500px;
+    font-size: 12px;
+    line-height: 1.66667;
+}
