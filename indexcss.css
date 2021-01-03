@@ -4,12 +4,28 @@ span {
 }       
 
 .navbar {
+    background-color: gray;
     overflow: hidden;
-    background-color: white;
-    position: fixed;
-    top: 0;
     width: 100%;
     box-shadow: 1px 1px #155c11;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Make navbar items colour effect */
+.nav-item {
+	--x: 50%;
+	--y: 50%;
+	appearance: none;
+	padding: 0.5em 2em;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	border-radius: 100px;
+	border: 5px solid transparent;
+	background: linear-gradient(rgb(56,56,56), rgb(56,56,56)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
 
 .navbar-nav {
@@ -21,16 +37,25 @@ span {
 
 .navbar-nav > li {
     display: inline-block;
-    float:none;
+    float: none;
 }
 
 .navbar-nav li a {
-    color:black;
+    color: rgb(60,179,113);
+}
+.navbar-nav li a:hover {
+    background-color:rgb(105,105,105);
+    color:rgb(154,205,50);
 }
 
-.navbar-nav li a:hover {
-    background-color: white;
-    color:#51b14b;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .main {
+    padding-top: 102px;
 }
 
 html {
@@ -38,6 +63,22 @@ font-family: Open Sans,sans-serif;
 overflow-y: scroll;
 height: 1500px;
 line-height: 1.66667;
+}
+
+.top-container {
+    background-color:rgb(104,104,104);
+}
+
+img.picture1 {
+    width:30px;
+    height:30px;
+    float: left; 
+    margin: 0 10px 10px 0;
+}
+
+img.d-block {
+    width:450px;
+    height:312px;
 }
 
 /* Test */
@@ -75,4 +116,47 @@ line-height: 1.66667;
     height : 60px;
     right   : -36px;
     border-bottom-left-radius: 0;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+}
+
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators .active {
+    background-color: white;
+    max-width: 12px;
+    margin: 0 3px;
+    height: 12px;
+}
+
+.btn {
+  margin-top: auto;
 }
