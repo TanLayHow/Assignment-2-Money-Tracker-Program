@@ -1,7 +1,7 @@
-.main{
-    margin-top: 46px;
-    background-color: #f2f2f2;
-}
+span {
+    font-size: 2em;
+    font-family: 'Andika New Basic', sans-serif;
+}       
 
 .navbar {
     overflow: hidden;
@@ -9,41 +9,70 @@
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 1px 1px;
-    
-  }
-
-.navbar a.tag {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    box-shadow: 1px 1px #155c11;
 }
 
-.navbar a img{
-    width: 46px;
-    height: 46px;
-    float: left;
+.navbar-nav {
+    float:none;
+    margin:0 auto;
     display: block;
     text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-    margin-left: 150px
 }
 
-.navbar a.tag:hover{
-    background-color:#f2f2f2;
-    color:#155c11;
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
 }
 
-/* Keep */
+.navbar-nav li a {
+    color:black;
+}
+
+.navbar-nav li a:hover {
+    background-color: white;
+    color:#51b14b;
+}
+
 html {
-    font-family: Open Sans,sans-serif;
-    overflow-y: scroll;
-    height: 1500px;
-    font-size: 12px;
-    line-height: 1.66667;
+font-family: Open Sans,sans-serif;
+overflow-y: scroll;
+height: 1500px;
+line-height: 1.66667;
+}
+
+/* Test */
+.cloud {
+    text-align: center;
+    box-sizing: border-box;
+    width     : 90px;
+    height    : 90px;
+    padding   : 80px 1em 0 1em;
+    margin    : 0 100px;
+    position: relative;
+    background-color: #A4C9CF;
+    border-radius: 100% 100% 0 0;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    bottom  : 0;
+    z-index : -1;
+    background-color: #A4C9CF;
+    border-radius: 100%;
+}
+  
+.cloud::before {
+    width  : 75px;
+    height : 75px;
+    left    : -48px;
+    border-bottom-right-radius: 0;
+}
+  
+.cloud::after {
+    width  : 60px;
+    height : 60px;
+    right   : -36px;
+    border-bottom-left-radius: 0;
 }
