@@ -1,31 +1,15 @@
-span {
-    font-size: 2em;
-    font-family: 'Andika New Basic', sans-serif;
-}       
-
+/* Navbar */
 .navbar {
     background-color: gray;
     overflow: hidden;
     width: 100%;
     box-shadow: 1px 1px #155c11;
+    padding: 10px 16px;
+    z-index: 1;
 }
 
 .navbar-toggler-icon{
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Make navbar items colour effect */
-.nav-item {
-	--x: 50%;
-	--y: 50%;
-	appearance: none;
-	padding: 0.5em 2em;
-	color: white;
-	cursor: pointer;
-	outline: none;
-	border-radius: 100px;
-	border: 5px solid transparent;
-	background: linear-gradient(rgb(56,56,56), rgb(56,56,56)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
 
 .navbar-nav {
@@ -43,6 +27,7 @@ span {
 .navbar-nav li a {
     color: rgb(60,179,113);
 }
+
 .navbar-nav li a:hover {
     background-color:rgb(105,105,105);
     color:rgb(154,205,50);
@@ -54,8 +39,22 @@ span {
     width: 100%;
 }
 
-.sticky + .main {
-    padding-top: 102px;
+.sticky + .converter {
+    padding-top: 87px;
+}
+
+/* Make navbar items colour effect */
+.nav-item {
+	--x: 50%;
+	--y: 50%;
+	appearance: none;
+	padding: 0.5em 2em;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	border-radius: 100px;
+	border: 5px solid transparent;
+	background: linear-gradient(rgb(56,56,56), rgb(56,56,56)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
 
 html {
@@ -69,6 +68,7 @@ line-height: 1.66667;
     background-color:rgb(104,104,104);
 }
 
+/* Money Logo */
 img.picture1 {
     width:30px;
     height:30px;
@@ -76,48 +76,13 @@ img.picture1 {
     margin: 0 10px 10px 0;
 }
 
+/* Picture Slider Pictures */
 img.d-block {
     width:450px;
-    height:312px;
+    height:340px;
 }
 
-/* Test */
-.cloud {
-    text-align: center;
-    box-sizing: border-box;
-    width     : 90px;
-    height    : 90px;
-    padding   : 80px 1em 0 1em;
-    margin    : 0 100px;
-    position: relative;
-    background-color: #A4C9CF;
-    border-radius: 100% 100% 0 0;
-}
-
-.cloud::before,
-.cloud::after {
-    content: '';
-    position: absolute;
-    bottom  : 0;
-    z-index : -1;
-    background-color: #A4C9CF;
-    border-radius: 100%;
-}
-  
-.cloud::before {
-    width  : 75px;
-    height : 75px;
-    left    : -48px;
-    border-bottom-right-radius: 0;
-}
-  
-.cloud::after {
-    width  : 60px;
-    height : 60px;
-    right   : -36px;
-    border-bottom-left-radius: 0;
-}
-
+/* Top Card */
 .card-block {
     font-size: 1em;
     position: relative;
@@ -159,4 +124,137 @@ img.d-block {
 
 .btn {
   margin-top: auto;
+  transition: 2s;
+}
+
+/* Clock */
+.datetime{
+    color: #fff;
+    background: #10101E;
+    font-family: "Segoe UI", sans-serif;
+    width: 280px;
+    padding: 12px 8px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+  
+.datetime:hover{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+}
+  
+.date{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+  
+.time{
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+  
+.time span:last-child{
+    background: #2E94E3;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+div.clock {
+    justify-content: center;
+    align-items: center;
+}
+
+.converter {
+    background-color: #333641;;
+}
+
+/* "Adding Transaction title" */
+div.main-title {
+    margin-bottom: 30px;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: 50% 100% / 50% 50% no-repeat
+                radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4vw;
+    font-family: "Source Sans Pro", sans-serif;
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+               glow 2500ms linear infinite 2000ms;}
+  
+@keyframes reveal {
+    80%{
+    letter-spacing: 8px;
+    }
+    100% {
+    background-size: 300% 300%;
+    }
+}
+@keyframes glow {
+    40% {
+    text-shadow: 0 0 8px #fff;
+    }
+}
+
+/* Day/Night button */
+input.check {
+    float: right;
+    margin-right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-appearance: none;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+    background-size: cover;
+    border-radius: 25px;
+    outline: none;
+    transition: background-image .90s;
+    box-shadow: 0px 2px 5px 1px gray;
+}
+  
+input.check:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background-color: navy;
+    border-radius: 25px;
+    transition: all .9s;
+    background-color: #F7CA33;
+}
+  
+input.check:checked {
+    background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+    transition: background-image .90s;
+}
+  
+input.check:checked:before {
+    transform: translate(100%);
+    transition: all .9s;
+    background-color: #ECF0F3;
 }
