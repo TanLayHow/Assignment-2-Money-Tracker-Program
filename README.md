@@ -7,12 +7,14 @@
    1. Categories they spend their money on -> Using Charts to display information,
    2. Total expenses daily and monthly,
    3. If they have crossed their budgets
- 
-### Caters to 
-(People who want to get information on their expenses):
+
+&nbsp;
+### Caters to:
+(People who want to get information on their expenses)
 1. Students
 2. Adults
 
+&nbsp;
 ### Potential Additions:
 Potential Additions | Category | Progress | Done?
 ------------ | ------------- | ------------ | ------------- | 
@@ -29,6 +31,7 @@ Daily expenditures | Layout | - | No
 Monthly expenditures | Layout | - | No
 Budget information | Layout | - | No
 
+&nbsp;
 ### Visual Ideas:
 1. Charts
 2. Effects
@@ -37,11 +40,14 @@ Budget information | Layout | - | No
    3. Radial gradiant
    4. Text-shadow
    5. Hover
-   
+
+&nbsp;
 ### Website Responsiveness:
 
+&nbsp;
 ### Api Referenced:
 
+&nbsp;
 ### Pictures from sites used:
 Pictures | Links
 ------------ | ------------- |
