@@ -19,8 +19,8 @@
 Potential Additions | Category | Progress | Done?
 ------------ | ------------- | ------------ | ------------- | 
 Dark Mode UI(Day/Night switch) | Feature | Added button | No
-Clock with date | Feature | Added digital clock | Yes
-Adding transactions function | Feature | Added Layout | No
+Clock with date | Feature | Done | Yes
+Adding transactions function | Feature | Done | Yes
 Clear expenditures button | Feature | - | No
 Setting daily budget | Feature | - | No
 Main header for page | Layout | Used cards+carousel for header | Yes
