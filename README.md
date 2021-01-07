@@ -23,8 +23,8 @@ Clock with date | Feature | Done | Yes
 Adding transactions function | Feature | Done | Yes
 Clear expenditures button | Feature | Done | Yes
 Setting daily budget | Feature | Done | Yes
-Main header for page | Layout | Done | Yes
 Contact Form | Feature | - | No
+Main header for page | Layout | Done | Yes
 Sticky navigation header | Layout | Done | Yes
 Recent transactions page | Layout | - | No
 Daily expenditures | Layout | - | No
