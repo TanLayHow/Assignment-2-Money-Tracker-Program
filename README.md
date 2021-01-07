@@ -22,7 +22,7 @@ Dark Mode UI(Day/Night switch) | Feature | Added button | No
 Clock with date | Feature | Added digital clock | Yes
 Adding transactions function | Feature | Added Layout | No
 Clear expenditures button | Feature | - | No
-Setting daily budget | Feature | - | No
+Setting daily budget | Feature | Added layout of form | No
 Main header for page | Layout | Used cards+carousel for header | Yes
 Contact Form | Feature | - | No
 Sticky navigation header | Layout | Used navbar for header | Yes
