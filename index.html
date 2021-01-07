@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-<!-- testing -->
 <head>
     <meta charset="utf-8">
     <title>Money Tracker</title>
@@ -119,94 +118,77 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <br><br>
-        <form id="myForm">
-            <br><br>
-            <label for="Base Currency">Base Currency</label>
-            <select class="form-control" id="base">
-                <option>USD</option>
-                <option>HKD</option>
-                <option>ISK</option>
-                <option>PHP</option>
-                <option>DKK</option>
-                <option>HUF</option>
-                <option>CZK</option>
-                <option>GBP</option>
-                <option>RON</option>
-                <option>SEK</option>
-                <option>IDR</option>
-                <option>INR</option>
-                <option>BRL</option>
-                <option>RUB</option>
-                <option>HRK</option>
-                <option>JPY</option>
-                <option>THB</option>
-                <option>CHF</option>
-                <option>EUR</option>
-                <option>MYR</option>
-                <option>BGN</option>
-                <option>TRY</option>
-                <option>CNY</option>
-                <option>NOK</option>
-                <option>NZD</option>
-                <option>ZAR</option>
-                <option>CAD</option>
-                <option>MXN</option>
-                <option>SGD</option>
-                <option>AUD</option>
-                <option>ILS</option>
-                <option>KRW</option>
-                <option>PLN</option>
-            </select>
-            <br>
-            <div class="form-group">
-                <input type="number" class="form-control" id="baseNumber" value="1">
-            </div>
-            <label for="Target Currency">Target Currency</label>
-            <select class="form-control" id="target">
-                <option>INR</option>
-                <option>HKD</option>
-                <option>ISK</option>
-                <option>PHP</option>
-                <option>DKK</option>
-                <option>HUF</option>
-                <option>CZK</option>
-                <option>GBP</option>
-                <option>RON</option>
-                <option>SEK</option>
-                <option>IDR</option>
-                <option>CAD</option>
-                <option>BRL</option>
-                <option>RUB</option>
-                <option>HRK</option>
-                <option>JPY</option>
-                <option>THB</option>
-                <option>CHF</option>
-                <option>EUR</option>
-                <option>MYR</option>
-                <option>BGN</option>
-                <option>TRY</option>
-                <option>CNY</option>
-                <option>NOK</option>
-                <option>NZD</option>
-                <option>ZAR</option>
-                <option>USD</option>
-                <option>MXN</option>
-                <option>SGD</option>
-                <option>AUD</option>
-                <option>ILS</option>
-                <option>KRW</option>
-                <option>PLN</option>
-            </select>
-            <br>
-            <div class="form-group">
-                <input type="number" class="form-control" id="targetNumber">
-            </div>
-        </form>
     </div>
-  </div>
+
+    <div class="add-form">
+      <form>
+          <div class="form-group">
+              <input type="number" class="form-control item" id="amt" min="0.01" placeholder="Enter amount..." required>
+          </div>
+          <div class="form-group">
+              <select id="selectc" class="form-control item" required>
+                  <option id="selected" selected disabled>Select currency...</option>
+                  <option>US Dollar - USD</option>
+                  <option>Japanese Yen - JPY</option>
+                  <option>British Pound - GBP</option>
+                  <option>Australian Dollar - AUD</option>
+                  <option>Canadian Dollar - CAD</option>
+                  <option>Swiss Franc - CHF</option>
+                  <option>Chinese Yuan Renminbi - CNY</option>
+                  <option>Swedish Krona - SEK</option>
+                  <option>New Zealand Dollar - NZD</option>
+                  <option>Mexican Peso - MXN</option>
+                  <option>Singapore Dollar - SGD</option>
+                  <option>Hong Kong Dollar - HKD</option>
+                  <option>Norwegian Krone - NOK</option>
+                  <option>South Korean Won - KRW</option>
+                  <option>Turkish Lira - TRY</option>
+                  <option>Russian Ruble - RUB</option>
+                  <option>Indian Rupee - INR</option>
+                  <option>Brazilian Real - BRL</option>
+                  <option>South African Rand - ZAR</option>
+                  <option>Philippine Peso - PHP</option>
+                  <option>Czech Koruna - CZK</option>
+                  <option>Indonesian Rupiah - IDR</option>
+                  <option>Malaysian Ringgit - MYR</option>
+                  <option>Hungarian Forint - HUF</option>
+                  <option>Icelandic Krona - ISK</option>
+                  <option>Croatian Kuna - HRK</option>
+                  <option>Bulgarian Lev - BGN</option>
+                  <option>Romanian Leu - RON</option>
+                  <option>Danish Krone - DKK</option>
+                  <option>Thai Baht - THB</option>
+                  <option>Polish Zloty - PLN</option>
+                  <option>Israeli Shekel - ILS</option>                  
+                </select>
+          </div>
+          
+          <div class="form-group">
+              <select id="selectcat" class="form-control item" required>
+                  <option id="selectedcat" selected disabled>Select category...</option>
+                  <option>Entertainment</option>
+                  <option>Food & Beverage</option>
+                  <option>Bills & Utilities</option>
+                  <option>Transportation</option>
+                  <option>Others</option>
+              </select>
+          </div>
+
+          <div class="form-group" required>
+              <input class="form-control" type="date" id="date-input">
+            </div>
+          
+          <div id="conversion" class="container p-3 my-3 bg-primary text-white">
+              <button type="button" onclick="doFunction()">Convert currency to SGD</button>
+              <p>Total: </p><p id="displayhere"></p>
+          </div>
+
+          <div class="form-group">
+              <button id="send" type="button" onclick="addLocal()" class="btn btn-block add-trans" disabled="disabled">Add Transaction</button>
+          </div>
+      </form>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -215,4 +197,11 @@
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
-</html>
+
+
+
+
+
+
+
+
