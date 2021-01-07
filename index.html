@@ -102,6 +102,9 @@
   <div class="converter" id="purpose">
     <div class="main-title">Adding Transactions</div>
     <input class="check" type="checkbox">
+    <div>
+      <button id="clear" type="button" onclick="clearFunction();alertClear()" class="btn">Clear All Expenditure</button>
+    </div>
       <div class="clock">
         <div class="datetime">
           <div class="date">
@@ -123,11 +126,11 @@
     <div class="add-form">
       <form>
           <div class="form-group">
-              <input type="number" class="form-control item" id="amt" min="0.01" placeholder="Enter amount..." required>
+              <input type="number" class="form-control item" id="amt" min="0.01" placeholder="Enter amount of transaction..." required>
           </div>
           <div class="form-group">
               <select id="selectc" class="form-control item" required>
-                  <option id="selected" selected disabled>Select currency...</option>
+                  <option id="selected" selected disabled>Select currency of transaction...</option>
                   <option>US Dollar - USD</option>
                   <option>Japanese Yen - JPY</option>
                   <option>British Pound - GBP</option>
@@ -165,7 +168,7 @@
           
           <div class="form-group">
               <select id="selectcat" class="form-control item" required>
-                  <option id="selectedcat" selected disabled>Select category...</option>
+                  <option id="selectedcat" selected disabled>Select category of transaction...</option>
                   <option>Entertainment</option>
                   <option>Food & Beverage</option>
                   <option>Bills & Utilities</option>
@@ -184,10 +187,12 @@
           </div>
 
           <div class="form-group">
-              <button id="send" type="button" onclick="addLocal()" class="btn btn-block add-trans" disabled="disabled">Add Transaction</button>
+              <button id="send" type="button" onclick="addLocal();alertTrans()" class="btn btn-block add-trans" disabled="disabled">Add Transaction</button>
           </div>
       </form>
     </div>
+
+    <hr/>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

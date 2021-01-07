@@ -366,3 +366,15 @@ window.setInterval(function(){
     $('#send').removeAttr('disabled');
   }
 }, 300);
+
+function clearFunction(){
+  localStorage.clear();
+}
+
+function alertClear(){
+  alert("All expenditures has been cleared.");
+}
+
+function alertTrans(){
+  alert("Transaction has been added.");
+}
