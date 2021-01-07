@@ -283,7 +283,7 @@ input.check:checked:before {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
 }
 
-#selectc,#selectcat,#date-input,#conversion {
+#selectc,#selectcat,#date-input,#conversion,#date-inputs {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;

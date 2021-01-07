@@ -261,6 +261,10 @@ var storecate = '';
 var exchangerate = '';
 var displaytext = '';
 var calculate = '';
+var budday = '';
+var budmonth = '';
+var budyear = '';
+var budamt = '';
 
 // Changes the converted currency so that it can be displayed (Exchange rate)
 $(function() {
@@ -381,9 +385,13 @@ function alertTrans(){
   alert("Transaction has been added.");
 }
 
+function alertTran(){
+  alert("Budget has been set.");
+}
+
 // Set daily budget form
 window.setInterval(function(){
-  if(storebudget == '')
+  if(budamt == "" || budday == "" || budmonth == "" || budyear == "")
   {
     $('#send1').attr('disabled', 'disabled');
   }
@@ -391,4 +399,40 @@ window.setInterval(function(){
   {
     $('#send1').removeAttr('disabled');
   }
-}, 300)
+}, 300);
+
+// Get variables for budget date
+$("#date-inputs").change(function(){ 
+  var dat = new Date( $(this).val());
+  var years = dat.getFullYear();
+  var months = dat.getMonth()+1;
+  var days = dat.getDate();
+  budyear = years;
+  budmonth = months;
+  budday = days;
+})
+
+// Get amount to set budget
+$(function() {
+  // When user selects an option, a change happens, the function starts
+  $("#amts").change(function() {
+    // Getting amount input from user
+    budamt = document.getElementById("amts").value;
+    console.log(budamt);
+  })
+})
+
+// Add budget to localstorage
+function addLocals() {
+  var budgetdate = budyear+"/"+budmonth+"/"+budday;
+  console.log(budgetdate);
+  // Check if localstorage already have budget
+  if (localStorage.getItem(budgetdate) == null)
+  {
+    localStorage.setItem(budgetdate,budamt);
+  }
+  else {
+    localStorage.removeItem(budgetdate);
+    localStorage.setItem(budgetdate,budamt);
+  }
+}
