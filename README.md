@@ -21,11 +21,11 @@ Potential Additions | Category | Progress | Done?
 Dark Mode UI(Day/Night switch) | Feature | Added button | No
 Clock with date | Feature | Done | Yes
 Adding transactions function | Feature | Done | Yes
-Clear expenditures button | Feature | - | No
-Setting daily budget | Feature | Added layout of form | No
-Main header for page | Layout | Used cards+carousel for header | Yes
+Clear expenditures button | Feature | Done | Yes
+Setting daily budget | Feature | Done | Yes
+Main header for page | Layout | Done | Yes
 Contact Form | Feature | - | No
-Sticky navigation header | Layout | Used navbar for header | Yes
+Sticky navigation header | Layout | Done | Yes
 Recent transactions page | Layout | - | No
 Daily expenditures | Layout | - | No
 Monthly expenditures | Layout | - | No
@@ -46,6 +46,7 @@ Budget information | Layout | - | No
 
 &nbsp;
 ### Api Referenced:
+https://api.exchangeratesapi.io/latest (Exchange rate of currencies relative to EUR)
 
 &nbsp;
 ### Pictures from sites used:
