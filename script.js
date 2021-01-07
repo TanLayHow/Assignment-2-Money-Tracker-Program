@@ -367,10 +367,12 @@ window.setInterval(function(){
   }
 }, 300);
 
+// Button function for clear expenditure
 function clearFunction(){
   localStorage.clear();
 }
 
+// Alert functions
 function alertClear(){
   alert("All expenditures has been cleared.");
 }
@@ -378,3 +380,15 @@ function alertClear(){
 function alertTrans(){
   alert("Transaction has been added.");
 }
+
+// Set daily budget form
+window.setInterval(function(){
+  if(storebudget == '')
+  {
+    $('#send1').attr('disabled', 'disabled');
+  }
+  else
+  {
+    $('#send1').removeAttr('disabled');
+  }
+}, 300)
