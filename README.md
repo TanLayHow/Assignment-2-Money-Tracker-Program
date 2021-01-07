@@ -26,7 +26,7 @@ Setting daily budget | Feature | Added layout of form | No
 Main header for page | Layout | Used cards+carousel for header | Yes
 Contact Form | Feature | - | No
 Sticky navigation header | Layout | Used navbar for header | Yes
-Recent transactions | Layout | - | No
+Recent transactions page | Layout | - | No
 Daily expenditures | Layout | - | No
 Monthly expenditures | Layout | - | No
 Budget information | Layout | - | No
