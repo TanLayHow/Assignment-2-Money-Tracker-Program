@@ -24,12 +24,14 @@ Adding transactions function | Feature | Done | Yes
 Clear expenditures button | Feature | Done | Yes
 Setting daily budget | Feature | Done | Yes
 Contact Form | Feature | - | No
+Form validation | Feature | Done | Yes
+All charts are updated with every input | Feature | Done | Yes
 Main header for page | Layout | Done | Yes
 Sticky navigation header | Layout | Done | Yes
 Recent transactions page | Layout | Done | Yes
 Daily expenditures | Layout | Done | Yes
 Monthly expenditures | Layout | Done | Yes
-Budget information | Layout | - | No
+Budget information | Layout | Done | Yes
 
 &nbsp;
 ### Visual Ideas:
