@@ -26,9 +26,9 @@ Setting daily budget | Feature | Done | Yes
 Contact Form | Feature | - | No
 Main header for page | Layout | Done | Yes
 Sticky navigation header | Layout | Done | Yes
-Recent transactions page | Layout | - | No
-Daily expenditures | Layout | - | No
-Monthly expenditures | Layout | - | No
+Recent transactions page | Layout | Done | Yes
+Daily expenditures | Layout | Done | Yes
+Monthly expenditures | Layout | Done | Yes
 Budget information | Layout | - | No
 
 &nbsp;
