@@ -265,6 +265,9 @@ var budday = '';
 var budmonth = '';
 var budyear = '';
 var budamt = '';
+var dday = '';
+var dmonth = '';
+var dyear = '';
 
 // Changes the converted currency so that it can be displayed (Exchange rate)
 $(function() {
@@ -326,7 +329,7 @@ function addLocal() {
   var calculator = displaytext*exchangerate;
   var convertedamts = (Math.round(calculator * 100) / 100).toFixed(2);
   var dateadd = storeday+"/"+storemonth+"/"+storeyear;
-
+  
   // Add to "Recent Transactions"
   if (localStorage.getItem("Recent") == null)
   {
@@ -369,6 +372,14 @@ function addLocal() {
       localStorage.setItem(dateadd,JSON.stringify(list));
       console.log(localStorage);
     }
+
+  }
+
+  // Update daily chart, if transaction is on daily chart date
+  if(dateadd == dday+"/"+dmonth+"/"+dyear)
+  {
+    console.log("it should change");
+    dailyChart();
   }
 }
 
@@ -387,6 +398,7 @@ window.setInterval(function(){
 // Button function for clear expenditure
 function clearFunction(){
   localStorage.clear();
+  document.location.reload();
 }
 
 // Alert functions
@@ -453,12 +465,99 @@ function addLocals() {
 // Making Recent Transactions List
 function showRecent() {
   var showList = JSON.parse(localStorage.getItem("Recent"));
-  var j = showList.length/3;
-  var inputstring = '';
-  for(var i = 1; i<=showList.length; i+=3)
+  if (showList != null)
   {
-    inputstring += j+") $"+showList[showList.length-(i+1)]+" SGD spent on "+showList[showList.length-i]+" on "+showList[showList.length-(i+2)]+"<br>";
-    j--;
+    var j = showList.length/3;
+    var inputstring = '';
+    for(var i = 1; i<=showList.length; i+=3)
+    {
+      inputstring += j+") $"+showList[showList.length-(i+1)]+" SGD spent on "+showList[showList.length-i]+" on "+showList[showList.length-(i+2)]+"<br>";
+      j--;
+    }
+    document.getElementById("recent").innerHTML = inputstring;
   }
-  document.getElementById("recent").innerHTML = inputstring;
+}
+
+// Daily Expenditure
+// Getting date inputs to retrieve date from localstorage for daily expenditure chart
+$("#date-input1").change(function(){ 
+  var dailydate = new Date( $(this).val());
+  var dailyyear = dailydate.getFullYear();
+  var dailymonths = dailydate.getMonth()+1;
+  var dailydays = dailydate.getDate();
+  dyear = dailyyear;
+  dmonth = dailymonths;
+  dday = dailydays;
+  dailyChart();
+})
+
+function dailyChart() {
+  var data1 = 0;
+  var data2 = 0;
+  var data3 = 0;
+  var data4 = 0;
+  var data5 = 0;
+  var daily = dday+"/"+dmonth+"/"+dyear;
+  var dailyList = JSON.parse(localStorage.getItem(daily));
+  if (dailyList == null)
+  {
+    alert("There is no transaction on "+daily+".");
+    $('#myChart').remove();
+    $('#canvass').append('<canvas id="myChart"></canvas>');
+    document.getElementById("dtotal").innerHTML = '';
+    document.getElementById("dentertainment").innerHTML = '';
+    document.getElementById("dfood").innerHTML = '';
+    document.getElementById("dbills").innerHTML = '';
+    document.getElementById("dtransport").innerHTML = '';
+    document.getElementById("dothers").innerHTML = '';
+  }
+  else
+  {
+    $('#myChart').remove();
+    $('#canvass').append('<canvas id="myChart"></canvas>');
+    for(var i = 0; i<dailyList.length; i+=2)
+    {
+      if(dailyList[i] == "Entertainment")
+      {
+        data1 = dailyList[i+1];
+      }
+      else if(dailyList[i] == "Food & Beverage")
+      {
+        data2 = dailyList[i+1];
+      }
+      else if(dailyList[i] == "Bills & Utilities")
+      {
+        data3 = dailyList[i+1];
+      }
+      else if(dailyList[i] == "Transportation")
+      {
+        data4 = dailyList[i+1];
+      }
+      else if(dailyList[i] == "Others")
+      {
+        data5 = dailyList[i+1];
+      }
+    }
+    var ctx = document.getElementById('myChart').getContext('2d');
+    let myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Entertainment','Food & Beverage','Bills & Utilities','Transportation','Others'],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [data1, data2, data3, data4, data5],
+            backgroundColor: ['#DAF7A6','#FFC300','#FF5733','#C70039','#581845'],
+            borderWidth: 0
+          }
+        ]
+      }
+    });
+    document.getElementById("dtotal").innerHTML = Number(data1)+Number(data2)+Number(data3)+Number(data4)+Number(data5);
+    document.getElementById("dentertainment").innerHTML = data1;
+    document.getElementById("dfood").innerHTML = data2;
+    document.getElementById("dbills").innerHTML = data3;
+    document.getElementById("dtransport").innerHTML = data4;
+    document.getElementById("dothers").innerHTML = data5;
+  }
 }
