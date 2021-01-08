@@ -188,25 +188,28 @@ let currencies = [
 ];
 
 // Global variables so they can be referenced later on
-var storeyear = '';
-var storemonth = '';
-var storeday = '';
-var storecate = '';
-var exchangerate = '';
-var displaytext = '';
-var calculate = '';
-var budday = '';
-var budmonth = '';
-var budyear = '';
-var budamt = '';
-var dday = '';
-var dmonth = '';
-var dyear = '';
-var mmonth = '';
-var monthlymonth = '';
-var monthlyyear = '';
-var myear = '';
-var mmonths = 
+var storeyear = ''; // Used in addLocal() to add transactions
+var storemonth = ''; // Used in addLocal() to add transactions
+var storeday = ''; // Used in addLocal() to add transactions
+var storecate = ''; // Used in addLocal() to add transactions
+var exchangerate = ''; // Used in addLocal() to calculate SGD spent
+var displaytext = ''; // Used in addLocal() to calculate SGD spent
+var calculate = ''; // Used in addLocal() as SGD spent
+var budday = ''; // Used in addLocals() to make sure form is filled up
+var budmonth = ''; // Used in addLocals() to make sure form is filled up
+var budyear = ''; // Used in addLocals() to make sure form is filled up
+var budamt = ''; // Used in addLocals() to make sure form is filled up
+var dday = ''; // Used in dailyCharts() to get date for daily expenditure chart
+var dmonth = ''; // Used in dailyCharts() to get date for daily expenditure chart
+var dyear = ''; // Used in dailyCharts() to get date for daily expenditure chart
+var mmonth = ''; // Used in monthlyCharts() to get date for monthly expenditure chart
+var monthlymonth = ''; // Used in monthlyCharts() to get date for monthly expenditure chart
+var monthlyyear = ''; // Used in monthlyCharts() to get date for monthly expenditure chart
+var myear = ''; // Used in monthlyCharts() to get date for monthly expenditure chart
+var mmonths = ''; // Used in monthlyCharts() to get date for monthly expenditure chart
+var budgetyear = ''; // Used in budgetChart() to get date for budget information chart
+var budgetmonth = ''; // Used in budgetChart() to get date for budget information chart
+var budgetday = ''; // Used in budgetChart() to get date for budget information chart
 
 // Changes the converted currency so that it can be displayed (Exchange rate)
 $(function() {
@@ -351,6 +354,12 @@ function addLocal() {
   {
     monthlyChart();
   }
+
+  // Update budget information, if transaction is on budget information chart date
+  if (dateadd == budgetday+"/"+budgetmonth+"/"+budgetyear)
+  {
+    budgetChart();
+  }
 }
 
 // Make sure can add transaction only after all forms have been filled up
@@ -429,6 +438,13 @@ function addLocals() {
   else {
     localStorage.removeItem(budgetdate);
     localStorage.setItem(budgetdate,budamt);
+  }
+
+  // Update budget information, if transaction is on budget information chart date
+  var datebudget = budday+"/"+budmonth+"/"+budyear;
+  if (datebudget == budgetday+"/"+budgetmonth+"/"+budgetyear)
+  {
+    budgetChart();
   }
 }
 
@@ -617,5 +633,78 @@ function monthlyChart() {
     document.getElementById("mbills").innerHTML = data3;
     document.getElementById("mtransport").innerHTML = data4;
     document.getElementById("mothers").innerHTML = data5;
+  }
+}
+
+// Budget Information
+// Getting date inputs to retrieve budget from localstorage for budget information
+$("#date-input3").change(function(){ 
+  var budgetdates = new Date( $(this).val());
+  budgetyear = budgetdates.getFullYear();
+  budgetmonth = budgetdates.getMonth()+1;
+  budgetday = budgetdates.getDate();
+  budgetChart();
+})
+
+// Changing monthly charts
+function budgetChart() {
+  var testbudget = budgetyear+"/"+budgetmonth+"/"+budgetday;
+  budgetList = JSON.parse(localStorage.getItem(testbudget));
+
+  if (budgetList == null)
+  {
+    alert("There is no budget set on "+budgetday+"/"+budgetmonth+"/"+budgetyear+".");
+    $('#budgetChart').remove();
+    $('#canvas3').append('<canvas id="budgetChart"></canvas>');
+    document.getElementById("totalbudget").innerHTML = '';
+    document.getElementById("budgetspent").innerHTML = '';
+    document.getElementById("budgetleft").innerHTML = '';
+    $('#overspent').attr('hidden', 'hidden');
+  }
+  else
+  {
+    // Removing canvas so the charts don't overlap
+    $('#budgetChart').remove();
+    $('#canvas3').append('<canvas id="budgetChart"></canvas>');
+    
+    // Check if date has amount spent
+    var budgetTest = budgetday +"/"+ budgetmonth +"/"+ budgetyear;
+    var moneyList = JSON.parse(localStorage.getItem(budgetTest));
+    if (moneyList == null)
+    {
+      var amountspending = 0;
+    }
+    else{
+      var amountspending = '';
+      for(var i = 0; i<moneyList.length; i+=2)
+      {
+        amountspending += Number(moneyList[i+1]);
+      }
+    }
+  
+    var amountsleft = budgetList - amountspending;
+    // Making charts
+    var ctx = document.getElementById('budgetChart').getContext('2d');
+    let budgetChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Amount Spent','Amount Available'],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [amountspending,amountsleft],
+            backgroundColor: ['#DAF7A6','#FFC300'],
+            borderWidth: 0
+          }
+        ]
+      }
+    });
+    document.getElementById("totalbudget").innerHTML = budgetList;
+    document.getElementById("budgetspent").innerHTML = amountspending;
+    document.getElementById("budgetleft").innerHTML = amountsleft;
+    if (amountsleft < 0)
+    {
+      $('#overspent').removeAttr('hidden');
+    }
   }
 }

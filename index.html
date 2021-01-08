@@ -343,7 +343,57 @@
 
     <hr/>
 
-    
+    <div id="budgetinfo">
+      <div class="main-title">Budget Information</div>
+        <div class="form-group" required>
+          <input class="form-control" type="date" id="date-input3">
+        </div>
+
+        <section class="pie_chart_content">
+          <div class="overlay">
+            <div class="container">
+              <div class="row">
+      
+                <div class="col-md-6">
+                  <div class="main_box">
+                    <h1>Budget Information</h1>
+                    <div id="canvas3">
+                      <canvas id="budgetChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-md-6">
+                  <div class="count_box">
+                    <div class="form-group">
+                      <label for="totalbudget">Total Daily Budget</label>
+                      <div id="totalbudget" name="totalbudget" readonly class="totalbudget form-control"></div>
+                    </div>
+      
+                    <div class="form-group">
+                      <label for="budgetspent">Amount Spent</label>
+                      <div id="budgetspent" name="budgetspent" class="budgetspent form-control"></div>
+                    </div>
+      
+                    <div class="form-group">
+                      <label for="budgetleft">Amount Available</label>
+                      <div id="budgetleft" name="budgetleft" class="budgetleft form-control"></div>
+                    </div>
+
+                    <div class="form-group">
+                      <div hidden id="overspent" name="overspent" class="overspent form-control">Warning: Budget overspent.</div>
+                    </div>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
