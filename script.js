@@ -327,6 +327,19 @@ function addLocal() {
   var convertedamts = (Math.round(calculator * 100) / 100).toFixed(2);
   var dateadd = storeday+"/"+storemonth+"/"+storeyear;
 
+  // Add to "Recent Transactions"
+  if (localStorage.getItem("Recent") == null)
+  {
+    recentTrans = [dateadd,convertedamts,storecate];
+    localStorage.setItem("Recent",JSON.stringify(recentTrans));
+  }
+  else{
+    var recentList = JSON.parse(localStorage.getItem("Recent"));
+    recentList.push(dateadd,convertedamts,storecate);
+    localStorage.removeItem("Recent");
+    localStorage.setItem("Recent",JSON.stringify(recentList));
+  }
+
   // Check if localstorage is already saving date
   if (localStorage.getItem(dateadd) == null)
   {
@@ -435,4 +448,17 @@ function addLocals() {
     localStorage.removeItem(budgetdate);
     localStorage.setItem(budgetdate,budamt);
   }
+}
+
+// Making Recent Transactions List
+function showRecent() {
+  var showList = JSON.parse(localStorage.getItem("Recent"));
+  var j = showList.length/3;
+  var inputstring = '';
+  for(var i = 1; i<=showList.length; i+=3)
+  {
+    inputstring += j+") $"+showList[showList.length-(i+1)]+" SGD spent on "+showList[showList.length-i]+" on "+showList[showList.length-(i+2)]+"<br>";
+    j--;
+  }
+  document.getElementById("recent").innerHTML = inputstring;
 }

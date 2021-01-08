@@ -65,6 +65,7 @@ font-family: Open Sans,sans-serif;
 overflow-y: scroll;
 height: 1500px;
 line-height: 1.66667;
+scroll-behavior: smooth;
 }
 
 .top-container {
@@ -320,4 +321,21 @@ input.check:checked:before {
     margin-left: 200px;
     padding: 12px 8px;
     border-radius: 10px;
+}
+
+/* Recent Transactions */
+#recent {
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    text-align: center;
+    height: 500px;
+    overflow: scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

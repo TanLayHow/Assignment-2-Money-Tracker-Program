@@ -14,7 +14,7 @@
 
 </head>
 
-<body onload="initClock()" class="body">
+<body onload="initClock();showRecent()">
   <div class="top-container">
     <div class="container py-3">
         <div class="title h1 text-center"><marquee>Money Tracker</marquee></div>
@@ -187,7 +187,7 @@
           </div>
 
           <div class="form-group">
-              <button id="send" type="button" onclick="addLocal();alertTrans()" class="btn btn-block add-trans" disabled="disabled">Add Transaction</button>
+              <button id="send" type="button" onclick="addLocal();alertTrans();showRecent()" class="btn btn-block add-trans" disabled="disabled">Add Transaction</button>
           </div>
       </form>
     </div>
@@ -207,8 +207,19 @@
             <div class="form-group">
               <button id="send1" type="button" onclick="alertTran();addLocals()" class="btn btn-block add-trans" disabled="disabled">Set Budget</button>
           </div>
-
     </div>
+
+    <hr/>
+
+    <div>
+      <div class="main-title">Recent Transactions</div>
+      <div id="recent">
+        There are no transactions yet.
+      </div>
+    </div>
+
+    <div></div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
