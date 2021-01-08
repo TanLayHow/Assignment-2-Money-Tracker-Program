@@ -15,6 +15,12 @@
 2. Adults
 
 &nbsp;
+### Concepts Applied:
+1. Web API
+2. Localstorage
+3. Charts.js
+
+&nbsp;
 ### Potential Additions:
 Potential Additions | Category | Progress | Done?
 ------------ | ------------- | ------------ | ------------- | 
