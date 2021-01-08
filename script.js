@@ -56,200 +56,134 @@ let currencies = [
   {
     name: "US Dollar",
     abbreviation: "USD",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/us.gif"
   },
   {
     name: "Euro",
     abbreviation: "EUR",
-    symbol: "\u20AC",
-    flagURL: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg"
   },
   {
     name: "Japanese Yen",
     abbreviation: "JPY",
-    symbol: "\u00A5",
-    flagURL: "http://www.geonames.org/flags/l/jp.gif"
   },
   {
     name: "British Pound",
     abbreviation: "GBP",
-    symbol: "\u00A3",
-    flagURL: "http://www.geonames.org/flags/l/uk.gif"
   },
   {
     name: "Australian Dollar",
     abbreviation: "AUD",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/au.gif"
   },
   {
     name: "Canadian Dollar",
     abbreviation: "CAD",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/ca.gif"
   },
   {
     name: "Swiss Franc",
     abbreviation: "CHF",
-    symbol: "\u0043\u0048\u0046",
-    flagURL: "http://www.geonames.org/flags/l/ch.gif"
   },
   {
     name: "Chinese Yuan Renminbi",
     abbreviation: "CNY",
-    symbol: "\u00A5",
-    flagURL: "http://www.geonames.org/flags/l/cn.gif"
   },
   {
     name: "Swedish Krona",
     abbreviation: "SEK",
-    symbol: "\u006B\u0072",
-    flagURL: "http://www.geonames.org/flags/l/se.gif"
   },
   {
     name: "New Zealand Dollar",
     abbreviation: "NZD",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/nz.gif"
   },
   {
     name: "Mexican Peso",
     abbreviation: "MXN",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/mx.gif"
   },
   {
     name: "Singapore Dollar",
     abbreviation: "SGD",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/sg.gif"
   },
   {
     name: "Hong Kong Dollar",
     abbreviation: "HKD",
-    symbol: "\u0024",
-    flagURL: "http://www.geonames.org/flags/l/hk.gif"
   },
   {
     name: "Norwegian Krone",
     abbreviation: "NOK",
-    symbol: "\u006B\u0072",
-    flagURL: "http://www.geonames.org/flags/l/no.gif"
   },
   {
     name: "South Korean Won",
     abbreviation: "KRW",
-    symbol: "\u20A9",
-    flagURL: "http://www.geonames.org/flags/l/kr.gif"
   },
   {
     name: "Turkish Lira",
     abbreviation: "TRY",
-    symbol: "\u20BA",
-    flagURL: "http://www.geonames.org/flags/l/tr.gif"
   },
   {
     name: "Russian Ruble",
     abbreviation: "RUB",
-    symbol: "\u20BD",
-    flagURL: "http://www.geonames.org/flags/l/ru.gif"
   },
   {
     name: "Indian Rupee",
     abbreviation: "INR",
-    symbol: "\u20B9",
-    flagURL: "http://www.geonames.org/flags/l/in.gif"
   },
   {
     name: "Brazilian Real",
     abbreviation: "BRL",
-    symbol: "\u0052\u0024",
-    flagURL: "http://www.geonames.org/flags/l/br.gif"
   },
   {
     name: "South African Rand",
     abbreviation: "ZAR",
-    symbol: "\u0052",
-    flagURL: "http://www.geonames.org/flags/l/za.gif"
   },
   {
     name: "Philippine Peso",
     abbreviation: "PHP",
-    symbol: "\u20B1",
-    flagURL: "http://www.geonames.org/flags/l/ph.gif"
   },
   {
     name: "Czech Koruna",
     abbreviation: "CZK",
-    symbol: "\u004B\u010D",
-    flagURL: "http://www.geonames.org/flags/l/cz.gif"
   },
   {
     name: "Indonesian Rupiah",
     abbreviation: "IDR",
-    symbol: "\u0052\u0070",
-    flagURL: "http://www.geonames.org/flags/l/id.gif"
   },
   {
     name: "Malaysian Ringgit",
     abbreviation: "MYR",
-    symbol: "\u0052\u004D",
-    flagURL: "http://www.geonames.org/flags/l/my.gif"
   },
   {
     name: "Hungarian Forint",
     abbreviation: "HUF",
-    symbol: "\u0046\u0074",
-    flagURL: "http://www.geonames.org/flags/l/hu.gif"
   },
   {
     name: "Icelandic Krona",
     abbreviation: "ISK",
-    symbol: "\u006B\u0072",
-    flagURL: "http://www.geonames.org/flags/l/is.gif"
   },
   {
     name: "Croatian Kuna",
     abbreviation: "HRK",
-    symbol: "\u006B\u006E",
-    flagURL: "http://www.geonames.org/flags/l/hr.gif"
   },
   {
     name: "Bulgarian Lev",
     abbreviation: "BGN",
-    symbol: "\u043B\u0432",
-    flagURL: "http://www.geonames.org/flags/l/bg.gif"
   },
   {
     name: "Romanian Leu",
     abbreviation: "RON",
-    symbol: "\u006C\u0065\u0069",
-    flagURL: "http://www.geonames.org/flags/l/ro.gif"
   },
   {
     name: "Danish Krone",
     abbreviation: "DKK",
-    symbol: "\u006B\u0072",
-    flagURL: "http://www.geonames.org/flags/l/dk.gif"
   },
   {
     name: "Thai Baht",
     abbreviation: "THB",
-    symbol: "\u0E3F",
-    flagURL: "http://www.geonames.org/flags/l/th.gif"
   },
   {
     name: "Polish Zloty",
     abbreviation: "PLN",
-    symbol: "\u007A\u0142",
-    flagURL: "http://www.geonames.org/flags/l/pl.gif"
   },
   {
     name: "Israeli Shekel",
     abbreviation: "ILS",
-    symbol: "\u20AA",
-    flagURL: "http://www.geonames.org/flags/l/il.gif"
   }
 ];
 
@@ -268,6 +202,11 @@ var budamt = '';
 var dday = '';
 var dmonth = '';
 var dyear = '';
+var mmonth = '';
+var monthlymonth = '';
+var monthlyyear = '';
+var myear = '';
+var mmonths = 
 
 // Changes the converted currency so that it can be displayed (Exchange rate)
 $(function() {
@@ -329,6 +268,7 @@ function addLocal() {
   var calculator = displaytext*exchangerate;
   var convertedamts = (Math.round(calculator * 100) / 100).toFixed(2);
   var dateadd = storeday+"/"+storemonth+"/"+storeyear;
+  var mmonth = storemonth+"/"+storeyear;
   
   // Add to "Recent Transactions"
   if (localStorage.getItem("Recent") == null)
@@ -341,6 +281,31 @@ function addLocal() {
     recentList.push(dateadd,convertedamts,storecate);
     localStorage.removeItem("Recent");
     localStorage.setItem("Recent",JSON.stringify(recentList));
+  }
+
+  // Add to "Months"  to calculate monthly expenditure
+  if (localStorage.getItem(mmonth) == null)
+  {
+    var add = [storecate, convertedamts];
+    localStorage.setItem(mmonth,JSON.stringify(add));
+  }
+  else{
+    var list = JSON.parse(localStorage.getItem(mmonth));
+    if(list.includes(storecate))
+    {
+      c = Number(list[list.indexOf(storecate)+1]) + Number(convertedamts) // (New spending)
+      c = (Math.round(c* 100) / 100).toFixed(2);
+      list[list.indexOf(storecate)+1] = ""+c+"";
+      localStorage.removeItem(mmonth);
+      localStorage.setItem(mmonth,JSON.stringify(list));
+      console.log(localStorage);
+    }
+    else {
+      list.push(storecate);
+      list.push(convertedamts);
+      localStorage.setItem(mmonth,JSON.stringify(list));
+      console.log(localStorage);
+    }
   }
 
   // Check if localstorage is already saving date
@@ -378,8 +343,13 @@ function addLocal() {
   // Update daily chart, if transaction is on daily chart date
   if(dateadd == dday+"/"+dmonth+"/"+dyear)
   {
-    console.log("it should change");
     dailyChart();
+  }
+
+  // Update monthly chart, if transaction is on monthly chart month
+  if (mmonth == mmonths+"/"+myear)
+  {
+    monthlyChart();
   }
 }
 
@@ -491,6 +461,7 @@ $("#date-input1").change(function(){
   dailyChart();
 })
 
+// Changing daily charts
 function dailyChart() {
   var data1 = 0;
   var data2 = 0;
@@ -513,6 +484,7 @@ function dailyChart() {
   }
   else
   {
+    // Removing canvas so the charts don't overlap
     $('#myChart').remove();
     $('#canvass').append('<canvas id="myChart"></canvas>');
     for(var i = 0; i<dailyList.length; i+=2)
@@ -538,6 +510,7 @@ function dailyChart() {
         data5 = dailyList[i+1];
       }
     }
+    // Making charts
     var ctx = document.getElementById('myChart').getContext('2d');
     let myChart = new Chart(ctx, {
       type: 'pie',
@@ -559,5 +532,90 @@ function dailyChart() {
     document.getElementById("dbills").innerHTML = data3;
     document.getElementById("dtransport").innerHTML = data4;
     document.getElementById("dothers").innerHTML = data5;
+  }
+}
+
+// Monthly Expenditure
+// Getting date inputs to retrieve date from localstorage for monthly expenditure chart
+$("#date-input2").change(function(){ 
+  var monthlydate = new Date( $(this).val());
+  var monthlyyear = monthlydate.getFullYear();
+  var monthlymonths = monthlydate.getMonth()+1;
+  myear = monthlyyear;
+  mmonths = monthlymonths;
+  monthlyChart();
+})
+
+// Changing monthly charts
+function monthlyChart() {
+  var data1 = 0;
+  var data2 = 0;
+  var data3 = 0;
+  var data4 = 0;
+  var data5 = 0;
+  var monthly = mmonths+"/"+myear;
+  var monthlyList = JSON.parse(localStorage.getItem(monthly));
+  if (monthlyList == null)
+  {
+    alert("There is no transaction on "+monthly+".");
+    $('#myCharts').remove();
+    $('#canvasss').append('<canvas id="myCharts"></canvas>');
+    document.getElementById("mtotal").innerHTML = '';
+    document.getElementById("mentertainment").innerHTML = '';
+    document.getElementById("mfood").innerHTML = '';
+    document.getElementById("mbills").innerHTML = '';
+    document.getElementById("mtransport").innerHTML = '';
+    document.getElementById("mothers").innerHTML = '';
+  }
+  else
+  {
+    // Removing canvas so the charts don't overlap
+    $('#myCharts').remove();
+    $('#canvasss').append('<canvas id="myCharts"></canvas>');
+    for(var i = 0; i<monthlyList.length; i+=2)
+    {
+      if(monthlyList[i] == "Entertainment")
+      {
+        data1 = monthlyList[i+1];
+      }
+      else if(monthlyList[i] == "Food & Beverage")
+      {
+        data2 = monthlyList[i+1];
+      }
+      else if(monthlyList[i] == "Bills & Utilities")
+      {
+        data3 = monthlyList[i+1];
+      }
+      else if(monthlyList[i] == "Transportation")
+      {
+        data4 = monthlyList[i+1];
+      }
+      else if(monthlyList[i] == "Others")
+      {
+        data5 = monthlyList[i+1];
+      }
+    }
+    // Making charts
+    var ctx = document.getElementById('myCharts').getContext('2d');
+    let myCharts = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Entertainment','Food & Beverage','Bills & Utilities','Transportation','Others'],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [data1, data2, data3, data4, data5],
+            backgroundColor: ['#DAF7A6','#FFC300','#FF5733','#C70039','#581845'],
+            borderWidth: 0
+          }
+        ]
+      }
+    });
+    document.getElementById("mtotal").innerHTML = Number(data1)+Number(data2)+Number(data3)+Number(data4)+Number(data5);
+    document.getElementById("mentertainment").innerHTML = data1;
+    document.getElementById("mfood").innerHTML = data2;
+    document.getElementById("mbills").innerHTML = data3;
+    document.getElementById("mtransport").innerHTML = data4;
+    document.getElementById("mothers").innerHTML = data5;
   }
 }

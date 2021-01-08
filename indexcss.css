@@ -386,7 +386,6 @@ input.check:checked:before {
 }
 
 .dtotal {
-	background-color: #DAF7A6;
 	border: none;
 	color: white;
 }
@@ -422,6 +421,109 @@ input.check:checked:before {
 }
 
 .dothers {
+	background-color: #581845;
+	border: none;
+	color: white;
+}
+
+.form-control:focus {
+	background-color: transparent;
+	border: none;
+}
+
+.input-block {
+	font-size: 15px;
+}
+
+.input-block input {
+	border: 0;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 0.8em;
+	outline: 0;
+	margin-left: 16px;
+}
+
+/* Monthly Expenditure */
+#date-input2 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.pie_chart_content {
+    height: 800px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.pie_chart_content .container {
+	background-color: white;
+	border-radius: 40px;
+	padding: 0px;
+}
+
+.main_box h1 {
+	padding: 50px 0px 50px 0px;
+	font-size: 25px;
+	color: black;
+}
+
+.main_box {
+	background-color: white;
+	height: 100%;
+	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+}
+
+.count_box {
+	background-color: #182d6e;
+	border-bottom-right-radius: 30px;
+	border-top-right-radius: 30px;
+	height: 100%;
+	padding: 100px;
+}
+
+.mtotal {
+	border: none;
+	color: white;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+	background-color: #3546b0;
+	opacity: 1;
+}
+
+.mentertainment {
+	background-color: #DAF7A6;
+	border: none;
+	color: white;
+}
+
+.mfood {
+	background-color: #FFC300;
+	border: none;
+	color: white;
+}
+
+.mbills {
+	background-color: #FF5733;
+	border: none;
+	color: white;
+}
+
+.mtransport {
+	background-color : #C70039;
+	border: none;
+	color: white;
+}
+
+.mothers {
 	background-color: #581845;
 	border: none;
 	color: white;
