@@ -307,12 +307,6 @@ input.check:checked:before {
     margin-top: 20px;
 }   
 
-@media (max-width: 576px) {
-    .add form{
-        padding: 50px 20px;
-    }
-}
-
 /* Clear expenditure button */
 #clear {
     background: #10101E;
@@ -494,7 +488,7 @@ input.check:checked:before {
 .count_box {
 	background-color: #182d6e;
 	border-bottom-right-radius: 30px;
-	border-top-right-radius: 30px;
+    border-top-right-radius: 30px;
 	height: 100%;
 	padding: 100px;
 }
@@ -520,3 +514,84 @@ input.check:checked:before {
     color:white;
     background-color: red;
 }
+
+.budget_chart_content {
+    height: 550px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.budget_chart_content .container {
+	background-color: white;
+	border-radius: 40px;
+	padding: 0px;
+}
+
+/* Contact Me */
+.contactme {
+    height: 150px;
+}
+
+#contactme {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Web responsiveness */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    img.d-block {
+        width:510px;
+    }
+    .add form{
+        padding: 50px 20px;
+    }
+    input.check {
+        margin-right: 245px;   
+    }
+    .pie_chart_content {
+        height: 1000px;
+    }
+    .budget_chart_content {
+        height: 750px;
+    }
+    .main_box {
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .count_box {
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+}
+  
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    img.d-block {
+        width:510px;
+    }
+    .pie_chart_content {
+        height: 1000px;
+    }
+    .budget_chart_content {
+        height: 750px;
+    }
+    .main_box {
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .count_box {
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    img.d-block {
+        width:280px;
+    }
+} 
