@@ -29,7 +29,7 @@ Clock with date | Feature | Done | Yes
 Adding transactions function | Feature | Done | Yes
 Clear expenditures button | Feature | Done | Yes
 Setting daily budget | Feature | Done | Yes
-Contact Form | Feature | - | No
+Contact Form | Feature | Done | Yes
 Form validation | Feature | Done | Yes
 All charts are updated with every input | Feature | Done | Yes
 Main header for page | Layout | Done | Yes
@@ -51,6 +51,11 @@ Budget information | Layout | Done | Yes
 
 &nbsp;
 ### Website Responsiveness:
+Devices | Done?
+------------ | ------------- | 
+Small devices | Yes 
+Medium devices | Yes 
+Large devices | Yes 
 
 &nbsp;
 ### Api Referenced:
@@ -67,4 +72,10 @@ Currency image | https://ak.picdn.net/shutterstock/videos/9167711/thumb/1.jpg |
 Day switch image | https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png |
 Night switch image | https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png |
 
-   
+&nbsp;
+### Sources used:
+Sources | Links 
+------------ | ------------- |
+Pie charts | https://jsfiddle.net/Renison/g0tpfL8j/
+Digital clock | https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html
+Day/Night switch | https://blog.prototypr.io/create-a-scenic-day-and-night-toggle-button-with-html-and-css-37a8e2532e68
