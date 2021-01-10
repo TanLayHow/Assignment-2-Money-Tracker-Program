@@ -91,14 +91,16 @@ Day/Night switch | https://blog.prototypr.io/create-a-scenic-day-and-night-toggl
 ![](https://i.ibb.co/6Y465sy/addtransaction-2.png)
 4. Set Budgets page
 ![](https://i.ibb.co/JmsQcK3/setbudget.png)
-5. Daily Expenditures page
+5. Recent Transactions page
+![] (https://i.ibb.co/VpTwRwM/recenttransaction.png)
+6. Daily Expenditures page
 ![](https://i.ibb.co/6nL5ghW/dailyexpenditure-1.png)
 ![](https://i.ibb.co/HDk4Ywk/dailyexpenditure-2.png)
-6. Monthly Expenditures page 
+7. Monthly Expenditures page 
 ![](https://i.ibb.co/j56mXz4/monthlyexpenditure-1.png)
 ![](https://i.ibb.co/kxXKTVK/monthlyexpenditure-2.png)
-7. Budget Information page
+8. Budget Information page
 ![](https://i.ibb.co/bP6qmvw/budgetinfo-1.png)
 ![](https://i.ibb.co/2dTQLFY/budgetinfo-2.png)
-8. Contact Me page
+9. Contact Me page
 ![](https://i.ibb.co/wsyNhr0/contact.pngv)
