@@ -24,7 +24,7 @@
 ### Potential Additions:
 Potential Additions | Category | Progress | Done?
 ------------ | ------------- | ------------ | ------------- | 
-Dark Mode UI(Day/Night switch) | Feature | Added button | No
+Dark Mode UI(Day/Night switch) | Feature | Added button | To be added next time
 Clock with date | Feature | Done | Yes
 Adding transactions function | Feature | Done | Yes
 Clear expenditures button | Feature | Done | Yes
