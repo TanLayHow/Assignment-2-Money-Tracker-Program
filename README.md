@@ -79,3 +79,26 @@ Sources | Links
 Pie charts | https://jsfiddle.net/Renison/g0tpfL8j/
 Digital clock | https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html
 Day/Night switch | https://blog.prototypr.io/create-a-scenic-day-and-night-toggle-button-with-html-and-css-37a8e2532e68
+
+%nbsp;
+### Pictures of website by sections
+1. Main Header
+![](https://i.ibb.co/DKsbNPj/mainheader.png)
+2. Navbar
+![](https://i.ibb.co/h1G7qM8/navbar.png)
+3. Add Transactions page
+![](https://i.ibb.co/fd4PwFs/addtransaction-1.png)
+![](https://i.ibb.co/6Y465sy/addtransaction-2.png)
+4. Set Budgets page
+![](https://i.ibb.co/JmsQcK3/setbudget.png)
+5. Daily Expenditures page
+![](https://i.ibb.co/6nL5ghW/dailyexpenditure-1.png)
+![](https://i.ibb.co/HDk4Ywk/dailyexpenditure-2.png)
+6. Monthly Expenditures page 
+![](https://i.ibb.co/j56mXz4/monthlyexpenditure-1.png)
+![](https://i.ibb.co/kxXKTVK/monthlyexpenditure-2.png)
+7. Budget Information page
+![](https://i.ibb.co/bP6qmvw/budgetinfo-1.png)
+![](https://i.ibb.co/2dTQLFY/budgetinfo-2.png)
+8. Contact Me page
+![](https://i.ibb.co/wsyNhr0/contact.pngv)
