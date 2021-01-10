@@ -80,7 +80,7 @@ Pie charts | https://jsfiddle.net/Renison/g0tpfL8j/
 Digital clock | https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html
 Day/Night switch | https://blog.prototypr.io/create-a-scenic-day-and-night-toggle-button-with-html-and-css-37a8e2532e68
 
-%nbsp;
+&nbsp;
 ### Pictures of website by sections
 1. Main Header
 ![](https://i.ibb.co/DKsbNPj/mainheader.png)
