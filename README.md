@@ -1,5 +1,5 @@
 # Assignment-2
-## Money Tracker Program (Insert github page link)
+## Money Tracker Program (https://tanlayhow.github.io/Assignment-2/)
 
 ### User intent:
 1. Helping users track their daily expenses
