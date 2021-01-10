@@ -102,8 +102,11 @@
   <!-- Add Transactions page (2 buttons + 1 clock) -->
   <div class="converter" id="purpose">
     <div class="main-title">Adding Transactions</div>
+    <div class="secondary-title">Select amount, currency, date and category to add transaction.</div>
+    <!-- Day/Night switch -->
     <input class="check" type="checkbox">
     <div>
+      <!-- Clear Expenditures button -->
       <button id="clear" type="button" onclick="clearFunction();alertClear()" class="btn">Clear All Expenditure</button>
     </div>
       <div class="clock">
@@ -199,6 +202,7 @@
     <!-- Set daily budget form -->
     <div id="dailybudget">
       <div class="main-title">Setting Daily Budgets</div>
+      <div class="secondary-title">Select amount and date to set daily budget.</div>
       <div class="add-form">
         <form>
             <div class="form-group">
@@ -217,6 +221,7 @@
     <!-- Recent transactions page -->
     <div>
       <div class="main-title" id="recentpage">Recent Transactions</div>
+      <div class="secondary-title">Recent transactions will show up here, starting with the most recent ones</div>
       <div id="recent">
         There are no transactions yet.
       </div>
@@ -227,6 +232,7 @@
     <!-- Daily transactions chart -->
     <div id="dailytrans">
       <div class="main-title">Daily Expenditures</div>
+      <div class="secondary-title">Select date to show your daily expenditures.</div>
         <div class="form-group" required>
           <input class="form-control" type="date" id="date-input1">
         </div>
@@ -290,6 +296,7 @@
     <!-- Monthly transactions chart -->
     <div id="monthlytrans">
       <div class="main-title">Monthly Expenditures</div>
+      <div class="secondary-title">Select month to show your monthly expenditures.</div>
         <div class="form-group" required>
           <input class="form-control" type="month" id="date-input2">
         </div>
@@ -353,6 +360,7 @@
     <!-- Daily budget chart -->
     <div id="budgetinfo">
       <div class="main-title">Budget Information</div>
+      <div class="secondary-title">Select date to show your budget information.</div>
         <div class="form-group" required>
           <input class="form-control" type="date" id="date-input3">
         </div>
