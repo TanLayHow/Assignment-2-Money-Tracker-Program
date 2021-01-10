@@ -301,13 +301,11 @@ function addLocal() {
       list[list.indexOf(storecate)+1] = ""+c+"";
       localStorage.removeItem(mmonth);
       localStorage.setItem(mmonth,JSON.stringify(list));
-      console.log(localStorage);
     }
     else {
       list.push(storecate);
       list.push(convertedamts);
       localStorage.setItem(mmonth,JSON.stringify(list));
-      console.log(localStorage);
     }
   }
 
@@ -331,14 +329,12 @@ function addLocal() {
       list[list.indexOf(storecate)+1] = ""+c+"";
       localStorage.removeItem(dateadd);
       localStorage.setItem(dateadd,JSON.stringify(list));
-      console.log(localStorage);
     }
     else{
       // Localstorage has no category yet
       list.push(storecate);
       list.push(convertedamts);
       localStorage.setItem(dateadd,JSON.stringify(list));
-      console.log(localStorage);
     }
 
   }
@@ -422,14 +418,12 @@ $(function() {
   $("#amts").change(function() {
     // Getting amount input from user
     budamt = document.getElementById("amts").value;
-    console.log(budamt);
   })
 })
 
 // Add budget to localstorage
 function addLocals() {
   var budgetdate = budyear+"/"+budmonth+"/"+budday;
-  console.log(budgetdate);
   // Check if localstorage already have budget
   if (localStorage.getItem(budgetdate) == null)
   {
@@ -491,6 +485,7 @@ function dailyChart() {
     alert("There is no transaction on "+daily+".");
     $('#myChart').remove();
     $('#canvass').append('<canvas id="myChart"></canvas>');
+    // Side bars
     document.getElementById("dtotal").innerHTML = '';
     document.getElementById("dentertainment").innerHTML = '';
     document.getElementById("dfood").innerHTML = '';
@@ -526,6 +521,11 @@ function dailyChart() {
         data5 = dailyList[i+1];
       }
     }
+    data1 = (Math.round(data1 * 100) / 100).toFixed(2);
+    data2 = (Math.round(data2 * 100) / 100).toFixed(2);
+    data3 = (Math.round(data3 * 100) / 100).toFixed(2);
+    data4 = (Math.round(data4 * 100) / 100).toFixed(2);
+    data5 = (Math.round(data5 * 100) / 100).toFixed(2);
     // Making charts
     var ctx = document.getElementById('myChart').getContext('2d');
     let myChart = new Chart(ctx, {
@@ -542,7 +542,10 @@ function dailyChart() {
         ]
       }
     });
-    document.getElementById("dtotal").innerHTML = Number(data1)+Number(data2)+Number(data3)+Number(data4)+Number(data5);
+    var totalamountdaily = Number(data1)+Number(data2)+Number(data3)+Number(data4)+Number(data5);
+    totalamountdaily = (Math.round(totalamountdaily * 100) / 100).toFixed(2);
+    // Side bars
+    document.getElementById("dtotal").innerHTML = totalamountdaily;
     document.getElementById("dentertainment").innerHTML = data1;
     document.getElementById("dfood").innerHTML = data2;
     document.getElementById("dbills").innerHTML = data3;
@@ -576,6 +579,7 @@ function monthlyChart() {
     alert("There is no transaction on "+monthly+".");
     $('#myCharts').remove();
     $('#canvasss').append('<canvas id="myCharts"></canvas>');
+    // Side bars
     document.getElementById("mtotal").innerHTML = '';
     document.getElementById("mentertainment").innerHTML = '';
     document.getElementById("mfood").innerHTML = '';
@@ -612,6 +616,11 @@ function monthlyChart() {
       }
     }
     // Making charts
+    data1 = (Math.round(data1 * 100) / 100).toFixed(2);
+    data2 = (Math.round(data2 * 100) / 100).toFixed(2);
+    data3 = (Math.round(data3 * 100) / 100).toFixed(2);
+    data4 = (Math.round(data4 * 100) / 100).toFixed(2);
+    data5 = (Math.round(data5 * 100) / 100).toFixed(2);
     var ctx = document.getElementById('myCharts').getContext('2d');
     let myCharts = new Chart(ctx, {
       type: 'pie',
@@ -627,7 +636,10 @@ function monthlyChart() {
         ]
       }
     });
-    document.getElementById("mtotal").innerHTML = Number(data1)+Number(data2)+Number(data3)+Number(data4)+Number(data5);
+    var totalamountmonthly = Number(data1)+Number(data2)+Number(data3)+Number(data4)+Number(data5);
+    totalamountmonthly = (Math.round(totalamountmonthly * 100) / 100).toFixed(2);
+    // Side bars
+    document.getElementById("mtotal").innerHTML = totalamountmonthly;
     document.getElementById("mentertainment").innerHTML = data1;
     document.getElementById("mfood").innerHTML = data2;
     document.getElementById("mbills").innerHTML = data3;
@@ -656,6 +668,7 @@ function budgetChart() {
     alert("There is no budget set on "+budgetday+"/"+budgetmonth+"/"+budgetyear+".");
     $('#budgetChart').remove();
     $('#canvas3').append('<canvas id="budgetChart"></canvas>');
+    // Side bars
     document.getElementById("totalbudget").innerHTML = '';
     document.getElementById("budgetspent").innerHTML = '';
     document.getElementById("budgetleft").innerHTML = '';
@@ -675,14 +688,22 @@ function budgetChart() {
       var amountspending = 0;
     }
     else{
-      var amountspending = '';
+      var amountspending = 0;
       for(var i = 0; i<moneyList.length; i+=2)
       {
-        amountspending += Number(moneyList[i+1]);
+        if (amountspending == 0)
+        {
+          amountspending += Number(moneyList[i+1]);
+        }
+        else{
+          amountspending = Number(amountspending) + Number(moneyList[i+1]);
+        }
       }
     }
   
     var amountsleft = budgetList - amountspending;
+    amountspending = (Math.round(amountspending * 100) / 100).toFixed(2);
+    amountsleft = (Math.round(amountsleft * 100) / 100).toFixed(2);
     // Making charts
     var ctx = document.getElementById('budgetChart').getContext('2d');
     let budgetChart = new Chart(ctx, {
